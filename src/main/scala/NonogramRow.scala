@@ -1,12 +1,4 @@
-object NonogramRow extends App {
-  println(nonogramRow(List()))
-  println(nonogramRow(List(0,0,0,0,0)))
-  println(nonogramRow(List(1,1,1,1,1)))
-  println(nonogramRow(List(0,1,1,1,1,1,0,1,1,1,1)))
-  println(nonogramRow(List(1,1,0,1,0,0,1,1,1,0,0)))
-  println(nonogramRow(List(0,0,0,0,1,1,0,0,1,0,1,1,1)))
-  println(nonogramRow(List(1,0,1,0,1,0,1,0,1,0,1,0,1,0,1)))
-
+object NonogramRow {
   def nonogramRow(binarySeq: Seq[Int]): Seq[Int] = {
     (binarySeq :+ 0).foldLeft((List.empty[Int], 0)) {
       case ((result, counter), elem) =>
